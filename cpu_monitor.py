@@ -1,6 +1,6 @@
 # !/usr/bin/env python3
 # CPU monitor and fan activation; check_temp.py required in the same directory.
-# This script utilizes gpiosero to check the temperature of your RaspberryPi
+# This script utilizes gpiozero to check the temperature of your RaspberryPi
 # every 5 seconds and will toggle a fan on or off based on the result.
 # I'm sure theres a better way to do this without 2 files but I'm not that smart.
 # All pins are BCM not physical.
