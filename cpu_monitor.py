@@ -28,13 +28,10 @@ temp = CPUTemperature().temperature  # naming the actual temp
 # uncomment the line below if you want to use F instead of C
 #temp = round((CPUTemperature().temperature * 9/5) + 32)  # convert C to F
 fan = OutputDevice(21)  # Physical pin 40
-hot = 65    # when to turn fan on
-cool = 45   # when to turn fan off
+hot = 65    # when to turn the fan on
 while True:
     exec(open("check_temp.py").read())  # this file has a 5 second delay in it
-    if temp <= cool:
-        fan.off()
-    elif temp >= hot:
+    if temp >= hot:
         fan.on()
     else:
         fan.off()
